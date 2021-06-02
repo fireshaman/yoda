@@ -1,1 +1,0 @@
-SELECT TOP 100 * FROM dbo.AdInsertion WHERE CreatorId = 40953 AND NomInsertion like'smart-test-%' AND Statut = 1;
