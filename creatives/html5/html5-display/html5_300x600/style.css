@@ -1,0 +1,18 @@
+body
+{
+	font-family: 'Abril Fatface', cursive;
+}
+#main-container
+{
+	width: 300px;
+	height: 600px;
+	background-image: url("galaxia_50kb.jpg");
+	padding-top: 15%;
+	box-sizing: border-box;
+}
+#title
+{
+	width: 100%;
+	text-align: center;
+	color: white;
+}

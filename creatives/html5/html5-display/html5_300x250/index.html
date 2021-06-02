@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <style>
+		body{width:300px;height:250px;margin:0;padding:0;}
+		#banner{width:300px;height:250px;cursor:pointer;}
+		#click-area1{background-color:rgba(255,0,0,0);height:250px;display:block;}
+	</style>
+ 
+<script src="//ns.sascdn.com/diff/templates/js/banner/sas-clicktag-3.0.js"></script>
+	<!--<meta name="ad.size" content="width=300,height=250">-->
+	<script type="text/javascript">
+		var clickTag = "https://www.example.com/";
+	</script>
+	<title>300x250</title>
+	<link rel="stylesheet" type="text/css" href="css/screen.css">
+</head>
+
+<body>
+	<script type="text/javascript">
+	var clickTag = "http://smartadserver.com";
+	</script>
+	<div id="banner">
+		<a id="click-area1" target="_blank">
+			<img id="frame1" src="assets/frame1.png"/>
+			<img id="frame2" src="assets/frame2.png"/>
+		</a>
+	</div>
+	<script type="text/javascript">
+		//animation---------------------------------------------
+		var f1 = document.getElementById('frame1');
+		var f2 = document.getElementById('frame2');
+		
+		setTimeout(function() { 
+			f1.style.opacity = '0';
+		}, 3500 );
+		setTimeout(function() { 
+			f2.style.opacity = '1';
+		}, 4000 );
+		setTimeout(function() { 
+			f2.style.opacity = '0';
+		}, 7000 );
+		setTimeout(function() { 
+			f1.style.opacity = '1';
+		}, 7500 );
+	</script>
+	<script>
+	function customerFunc(){
+	var clickArea1 = document.getElementById("click-area1");
+	clickArea1.href = clickTag;
+	}
+	</script>
+</body>
+</html>
