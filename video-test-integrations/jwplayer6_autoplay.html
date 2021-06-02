@@ -1,0 +1,133 @@
+<html xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+    <title>Smart Test - JW Player 6.12(HTML5)</title>
+    <script type="text/javascript" src="//r.sascdn.com/video/config.js?nwid=256"></script>
+    <script type="text/javascript" src="//r.sascdn.com/video/controller.js?nwid=256"></script>
+    <!-- Use your distribution of the library -->
+    <script type="text/javascript" src="//ns.sascdn.com/video/players/jwplayer/6.12/jwplayer.js"></script>
+  </head>
+  <body>
+    <!-- Container div that will hold the targeted video player -->
+    <div id='player-container'></div>
+
+    <script type="text/javascript">
+      // Variables
+      var canLog = typeof console != 'undefined' && typeof console.log === 'function',
+        container = 'player-container',
+        // Use your own content file
+        videoFile = document.location.protocol + '//ns.sascdn.com/video/movies/samples/intermediate_content.mp4';
+
+      // Smart video object
+      var data = {
+        id: container,
+        adData: {
+          // Please replace this with your own Smart AdServer identifiers from Manage:
+          sas_siteid: '154912',
+          sas_pageid: '792896', // sas_pagename: 'linear',
+          sas_target: 'testplugin',
+          sas_format_linears: '30989',
+          sas_format_overlays: ''
+        },
+        adRules: [{
+          duration_min: 0,
+          duration_max: -1,
+          data: {
+            prerolls: {
+              instances: 1
+            }, midrolls: {
+              instances: 1,
+              percents: [50],
+              interval: 0
+            }, postrolls: {
+              instances: 1
+            }, overlays: {
+              instances: 1,
+              interval: 0,
+              percents: [20]
+            }
+          }
+        }],
+        callbacks: {
+          adBegin: function(obj){
+            if (canLog){
+              console.log('An ad begun');
+              console.log('  * Controller ID: ' + obj.controllerID);
+              console.log('  * Break: ' + obj.state);
+              console.log('  * Break type: ' + obj.type);
+            }
+          },
+          adBreakBegin: function(state, controllerID){
+            if (canLog){
+              console.log('An ad break begun');
+              console.log('  * Break: ' + state);
+              console.log('  * Controller ID: ' + controllerID);
+            }
+          },
+          adBreakEnd: function(state, controllerID){
+            if (canLog){
+              console.log('An ad break ended');
+              console.log('  * Break: ' + state);
+              console.log('  * Controller ID: ' + controllerID);
+            }
+          },
+          adEnd: function(obj){
+            if (canLog){
+              console.log('An ad ended');
+              console.log('  * Controller ID: ' + obj.controllerID);
+              console.log('  * Break: ' + obj.state);
+              console.log('  * Break type: ' + obj.type);
+            }
+          },
+          contentEnd: function(obj){
+            if (canLog){
+              console.log('Video content ended');
+              console.log('  * Controller ID: ' + obj.controllerID);
+            }
+          },
+          videoEnd: function(obj){
+            if (canLog){
+              console.log('Video experience ended');
+              console.log('  * Controller ID: ' + obj.controllerID);
+            }
+          }
+        },
+        configuration: {
+          publisher: {
+            forceSkipDelay: true,
+            html5SeamlessFullscreen: true,
+            skipDelay: 3
+          }
+        },
+        contentData: {
+          sas_contentproviderid: 'testProviderID',
+          sas_contentid: 'testContentID'
+        },
+        contentPlayer: {
+          api: null,
+          brigde: null
+        },
+        language: "EN"
+      };
+
+      // Player integration
+      var setupObject = {};
+      setupObject.file = videoFile;
+      setupObject.width = 600;
+      setupObject.height = 400;
+      setupObject.primary = 'html5';
+      setupObject.autostart = true;
+      setupObject.events = {};
+      setupObject.events.onReady = function(){
+        // Player ready
+        // Registering the player
+        if(typeof sas != 'undefined' && typeof sas.video != 'undefined') {
+          sas.video.register(data);
+        }
+      };
+      
+      // Embed with JW Player embedder
+      jwplayer(container).setup(setupObject);
+    </script>
+  </body>
+</html>

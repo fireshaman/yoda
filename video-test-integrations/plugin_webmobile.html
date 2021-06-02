@@ -1,0 +1,170 @@
+<html>
+<head>
+
+<!--<base href="url"-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>smart test - web mobile</title>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet">
+<style type="text/css">
+	body{margin:0px;padding:0px;font-family: 'Roboto Slab', serif;font-weight:300;font-size:20px;background-color:rgba(234, 234, 234,0.3);}#title{color:rgba(211, 74, 74,1);width:95%;text-align:center;margin-top:5%;font-family: 'Roboto Slab', serif;font-weight:700;font-size:35px;}#container{width:90%;height:auto;margin:auto;}#container p{width:100%;height:auto;}#container img{width:100%;height:auto;}#footer{color:rgba(211, 74, 74,1);opacity:0.6;width:100%;height:auto;padding:5%;box-sizing:border-box;text-align:center;font-size:15px;}
+</style>
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+	<script type="text/javascript" src="//r.sascdn.com/video/config.js?nwid=256"></script>
+    <script type="text/javascript" src="//r.sascdn.com/video/controller.js?nwid=256"></script>
+    <!-- Use your distribution of the library -->
+    <script type="text/javascript" src="//ns.sascdn.com/video/players/jwplayer/7.9.0/jwplayer.js"></script>
+
+</head>
+<body>
+
+<h2 id="title">Web Mobile Test</h2>
+
+<div id="container">
+	<p>
+		Lorem fistrum se calle ustée pupita apetecan hasta luego Lucas ese que llega ahorarr va usté muy cargadoo diodeno no te digo trigo por no llamarte Rodrigor ese pedazo de. Diodenoo ese que llega benemeritaar a peich jarl apetecan caballo blanco caballo negroorl. Tiene musho peligro pupita no te digo trigo por no llamarte Rodrigor caballo blanco caballo negroorl diodeno. Por la gloria de mi madre llevame al sircoo jarl amatomaa fistro no te digo trigo por no llamarte Rodrigor llevame al sircoo al ataquerl quietooor va usté muy cargadoo a peich. A wan se calle ustée me cago en tus muelas benemeritaar fistro al ataquerl va usté muy cargadoo diodeno. Jarl está la cosa muy malar llevame al sircoo diodenoo quietooor va usté muy cargadoo papaar papaar. Llevame al sircoo ese pedazo de va usté muy cargadoo pecador caballo blanco caballo negroorl te va a hasé pupitaa ese hombree torpedo diodeno. Diodeno a wan pecador tiene musho peligro te va a hasé pupitaa diodenoo hasta luego Lucas tiene musho peligro.
+	</p>
+	<p>
+		Lorem fistrum hasta luego Lucas ese pedazo de diodeno fistro la caidita sexuarl caballo blanco caballo negroorl tiene musho peligro mamaar. Llevame al sircoo hasta luego Lucas ese hombree pupita fistro torpedo amatomaa por la gloria de mi madre amatomaa. Llevame al sircoo ahorarr diodenoo jarl diodeno ese que llega por la gloria de mi madre. Te voy a borrar el cerito está la cosa muy malar se calle ustée hasta luego Lucas a peich jarl. Va usté muy cargadoo va usté muy cargadoo ese hombree qué dise usteer llevame al sircoo está la cosa muy malar.
+	</p>
+	<div id='player-container' style="margin-bottom: 20px;"></div>
+    <script type="text/javascript">
+      // Variables
+      var canLog = typeof console != 'undefined' && typeof console.log === 'function',
+        container = 'player-container',
+        // Use your own content file
+        videoFile = document.location.protocol + '//creatives.sascdn.com/diff/256/a345326/babydriver-trailer-tequila.mp4';
+      // Smart video object
+      var data = {
+        id: container,
+        adData: {// Please replace this with your own Smart AdServer identifiers from Manage:
+          sas_siteid: '154912',
+          sas_pageid: '792896', // sas_pagename: 'linear',
+          sas_target: 'testplugin',
+          sas_format_linears: '30989',
+          sas_format_overlays: ''
+        },
+        adRules: [{
+          duration_min: 0,
+          duration_max: -1,
+          data: {
+            prerolls: {
+              instances: 1
+            }, midrolls: {
+              instances: 1,
+              percents: [50],
+              interval: 0
+            }, postrolls: {
+              instances: 1
+            }, overlays: {
+              instances: 1,
+              interval: 0,
+              percents: [20]
+            }
+          }
+        }],
+        callbacks: {
+          adBegin: function(obj){
+            if (canLog){
+              console.log('An ad begun');
+              console.log('  * Controller ID: ' + obj.controllerID);
+              console.log('  * Break: ' + obj.state);
+              console.log('  * Break type: ' + obj.type);
+            }
+          },
+          adBreakBegin: function(state, controllerID){
+            if (canLog){
+              console.log('An ad break begun');
+              console.log('  * Break: ' + state);
+              console.log('  * Controller ID: ' + controllerID);
+            }
+          },
+          adBreakEnd: function(state, controllerID){
+            if (canLog){
+              console.log('An ad break ended');
+              console.log('  * Break: ' + state);
+              console.log('  * Controller ID: ' + controllerID);
+            }
+          },
+          adEnd: function(obj){
+            if (canLog){
+              console.log('An ad ended');
+              console.log('  * Controller ID: ' + obj.controllerID);
+              console.log('  * Break: ' + obj.state);
+              console.log('  * Break type: ' + obj.type);
+            }
+          },
+          contentEnd: function(obj){
+            if (canLog){
+              console.log('Video content ended');
+              console.log('  * Controller ID: ' + obj.controllerID);
+            }
+          },
+          videoEnd: function(obj){
+            if (canLog){
+              console.log('Video experience ended');
+              console.log('  * Controller ID: ' + obj.controllerID);
+            }
+          }
+        },
+        configuration: {
+          publisher: {
+            forceSkipDelay: true,
+            html5SeamlessFullscreen: true,
+            skipDelay: 3
+          }
+        },
+        contentData: {
+          sas_contentproviderid: 'testProviderID',
+          sas_contentid: 'testContentID'
+        },
+        contentPlayer: {
+          api: null,
+          brigde: null
+        },
+        language: "EN"
+      };
+      // Player integration
+      var setupObject = {};
+      setupObject.file = videoFile;
+      setupObject.width = 320;
+      setupObject.height = 180;
+      setupObject.primary = 'html5';
+      setupObject.autostart = false;
+      setupObject.events = {};
+      setupObject.events.onReady = function(){
+        // Player ready
+        // Registering the player
+        if(typeof sas != 'undefined' && typeof sas.video != 'undefined') {
+          sas.video.register(data);
+        }
+      };
+      // Embed with JW Player embedder
+      jwplayer(container).setup(setupObject);
+    </script>
+	<p>
+		Lorem fistrum benemeritaar papaar papaar llevame al sircoo me cago en tus muelas pecador papaar papaar mamaar. Hasta luego Lucas mamaar al ataquerl apetecan no puedor a gramenawer te voy a borrar el cerito apetecan ahorarr papaar papaar. Tiene musho peligro apetecan está la cosa muy malar va usté muy cargadoo. Diodeno diodeno ese pedazo de mamaar a wan papaar papaar diodeno. La caidita se calle ustée va usté muy cargadoo condemor por la gloria de mi madre diodeno ahorarr. Ahorarr a gramenawer condemor no te digo trigo por no llamarte Rodrigor ese que llega diodenoo no puedor ahorarr te voy a borrar el cerito qué dise usteer. Se calle ustée te voy a borrar el cerito ese hombree apetecan ese hombree hasta luego Lucas te va a hasé pupitaa de la pradera pecador hasta luego Lucas. Papaar papaar papaar papaar se calle ustée pecador ese hombree jarl. Se calle ustée amatomaa no te digo trigo por no llamarte Rodrigor ese pedazo de pupita a peich te voy a borrar el cerito llevame al sircoo jarl torpedo.
+	</p>
+	<p>
+		Lorem fistrum de la pradera amatomaa de la pradera sexuarl apetecan ese pedazo de te va a hasé pupitaa pecador va usté muy cargadoo. Fistro fistro ese hombree tiene musho peligro amatomaa te va a hasé pupitaa de la pradera mamaar. Pecador a gramenawer diodeno al ataquerl ese que llega amatomaa. Ese que llega está la cosa muy malar diodeno a wan por la gloria de mi madre. A gramenawer a peich condemor quietooor ahorarr me cago en tus muelas ese que llega de la pradera va usté muy cargadoo está la cosa muy malar fistro. La caidita tiene musho peligro jarl ese que llega ahorarr ese que llega a wan ese pedazo de diodenoo va usté muy cargadoo. Papaar papaar quietooor amatomaa sexuarl a peich se calle ustée te voy a borrar el cerito apetecan caballo blanco caballo negroorl ese hombree a gramenawer.
+	</p>
+	<img src="https://media.giphy.com/media/3o7qiZd2ORhXiqoEDe/giphy.gif">
+	<p>
+		Lorem fistrum ese que llega a wan se calle ustée no te digo trigo por no llamarte Rodrigor qué dise usteer diodenoo no te digo trigo por no llamarte Rodrigor sexuarl ese pedazo de. Diodeno fistro se calle ustée va usté muy cargadoo benemeritaar ahorarr pecador quietooor no puedor. Ese pedazo de por la gloria de mi madre no te digo trigo por no llamarte Rodrigor amatomaa amatomaa papaar papaar llevame al sircoo. Diodenoo a peich sexuarl pecador tiene musho peligro diodenoo sexuarl pecador papaar papaar se calle ustée. Me cago en tus muelas me cago en tus muelas ese hombree jarl apetecan. Se calle ustée tiene musho peligro al ataquerl qué dise usteer qué dise usteer qué dise usteer fistro pupita me cago en tus muelas.
+	</p>
+	<img src="https://media.giphy.com/media/3ohzgN8AQh5S8BjZq8/source.gif">
+	<p>
+		Tiene musho peligro de la pradera ese pedazo de va usté muy cargadoo caballo blanco caballo negroorl va usté muy cargadoo quietooor. Mamaar caballo blanco caballo negroorl pupita la caidita jarl a wan la caidita. Ese que llega benemeritaar condemor por la gloria de mi madre apetecan ese pedazo de sexuarl jarl a wan. Me cago en tus muelas caballo blanco caballo negroorl diodenoo qué dise usteer torpedo hasta luego Lucas ahorarr se calle ustée te va a hasé pupitaa diodenoo hasta luego Lucas. Se calle ustée a gramenawer diodenoo quietooor ese pedazo de te va a hasé pupitaa jarl amatomaa llevame al sircoo a wan ahorarr. Va usté muy cargadoo a wan de la pradera de la pradera benemeritaar hasta luego Lucas por la gloria de mi madre se calle ustée quietooor diodenoo de la pradera.
+	</p>
+
+	<p>
+		Qué dise usteer diodenoo condemor papaar papaar benemeritaar de la pradera a peich. Hasta luego Lucas sexuarl caballo blanco caballo negroorl llevame al sircoo caballo blanco caballo negroorl jarl no te digo trigo por no llamarte Rodrigor diodeno. Benemeritaar ese que llega no te digo trigo por no llamarte Rodrigor te voy a borrar el cerito sexuarl ese hombree. No puedor condemor te voy a borrar el cerito no puedor tiene musho peligro. Pupita papaar papaar amatomaa de la pradera sexuarl a gramenawer torpedo te voy a borrar el cerito. Jarl fistro hasta luego Lucas condemor va usté muy cargadoo no te digo trigo por no llamarte Rodrigor va usté muy cargadoo mamaar sexuarl. Fistro papaar papaar por la gloria de mi madre amatomaa quietooor quietooor apetecan no puedor.
+	</p>
+	<div id="footer">
+		Test by jmep - Smart
+	</div>
+</div>
+</body>
+</html>

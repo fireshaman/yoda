@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Sample Integration - HTML5 - JWPlayer 8.0.12</title>
+        <link rel="shortcut icon" type="image/x-icon" href="//demo.smartadserver.com/video/latest/samples/favicon.ico">
+        <script type="text/javascript" src="//demo.smartadserver.com/video/latest/samples/common/js/globals.js"></script>
+        <script type="text/javascript" src="//r.sascdn.com/video/config.js?nwid=8"></script>
+        <script type="text/javascript" src="//r.sascdn.com/video/controller.js?nwid=prod-latest"></script>
+        <script type="text/javascript" src="https://content.jwplatform.com/libraries/FnsUd6H3.js"></script>
+    </head>
+    <body>
+        <!-- Container div that will hold the targeted vdeo player -->
+        <div id="playerContainer"></div>
+        <script type="text/javascript">
+            // Variables
+            //jwDefaults.repeat = false;
+            var container = 'playerContainer',
+                setupObject = {};
+                setupObject.playlist = [{
+                image: posterFile,
+                sources: [{
+                    file:"//creatives.sascdn.com/diff/8/a389914/solo-trailer_640x266.mp4",
+                }],
+                    title: 'Solo!'
+                }];
+            setupObject.width = 800;
+            setupObject.height = 450;
+            setupObject.mute = false;
+            
+            jwplayer(container).setup(setupObject);
+            jwplayer(container).on('ready', function () {
+                // Player ready
+                // Registering the player
+                if(typeof sas != 'undefined' && typeof sas.video != 'undefined') {
+                    sas.video.register({
+                        id: container,
+                        adData: {
+                            sas_siteid: '256524',
+                            sas_pageid: '981885',
+                            sas_format_linears: '29827',
+                            sas_format_overlays: '29828',
+                            sas_target:'plugin'
+                        },
+                        adRules: [{
+                            duration_min: 0,
+                            duration_max: -1,
+                            data: {
+                                prerolls: {
+                                    instances: 1
+                                }, midrolls: {
+                                    instances: 1,
+                                    percents: [50]
+                                }, postrolls: {
+                                    instances: 1
+                                }, overlays: {
+                                    instances: 1,
+                                    percents: [10]
+                                }
+                            }
+                        }],
+                        configuration: {
+                            publisher: {
+                                forceSkipDelay: true, 
+                                html5SeamlessFullscreen: true,
+                                //skipDelay: 3
+                            }
+                        }
+                    });
+                }
+            });
+        </script>
+    </body>
+</html>

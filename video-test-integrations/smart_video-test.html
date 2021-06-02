@@ -1,0 +1,266 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta name="charset" content="ISO-8859-1" />
+	<meta name="description" content="UnOfficial Support Page Test - Smart AdServer">
+
+	<link rel="stylesheet" type="text/css" href="http://gallery.smartadserver.com/demo_web/style/style.css" />
+	<link rel="icon" type="image/x-icon" href="http://smartadserver.com/images/favicon.ico" />
+	<link rel="canonical" href="/smart-video-read-outstream-ad-format"/>
+	<link rel="stylesheet" type="text/css" href="http://jmep.es/resources/css/style_smart-test-plus.css">
+
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+	<script type="text/javascript" src="//r.sascdn.com/video/config.js?nwid=256"></script>
+    <script type="text/javascript" src="//r.sascdn.com/video/controller.js?nwid=256"></script>
+    <!-- Use your distribution of the library -->
+    <script type="text/javascript" src="//ns.sascdn.com/video/players/jwplayer/6.12/jwplayer.js"></script>
+
+	<title>	Smart Test Plus</title>
+</head>
+
+<body>
+	<div id="general_contianer">
+		<div id="first_container">
+		<div id="content_container">
+			<div id="header">
+				<div id="format_728x90" class="ad title">
+				<h1>
+					Smart Test Plus
+				</h1>
+				<h2 id="subtitle">
+					Official test, to be great! :D <br>
+				</h2>
+				</div>
+				<div id="logo_smart">
+					<img src="http://jmep.es/resources/img/logo_smart_jaune.png">
+				</div>
+			</div>
+			<div id="slider"></div>
+			<div id="general_article">
+				<!--first colum-->
+				<div id="first" align="top">
+					<div id="articleContent">
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728_end jump"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728 jump"></div>
+
+						<!-- SMART VIDEO INTEGRATION -->
+
+						<div id='player-container' style="margin-bottom: 20px;"></div>
+					    <script type="text/javascript">
+					      // Variables
+					      var canLog = typeof console != 'undefined' && typeof console.log === 'function',
+					        container = 'player-container',
+					        // Use your own content file
+					        videoFile = document.location.protocol + '//creatives.sascdn.com/diff/256/a345326/babydriver-trailer-tequila.mp4';
+					      // Smart video object
+					      var data = {
+					        id: container,
+					        adData: {// Please replace this with your own Smart AdServer identifiers from Manage:
+					          sas_siteid: '154912',
+					          sas_pageid: '792896', // sas_pagename: 'linear',
+					          sas_target: 'testplugin',
+					          sas_format_linears: '30989',
+					          sas_format_overlays: ''
+					        },
+					        adRules: [{
+					          duration_min: 0,
+					          duration_max: -1,
+					          data: {
+					            prerolls: {
+					              instances: 1
+					            }, midrolls: {
+					              instances: 1,
+					              percents: [50],
+					              interval: 0
+					            }, postrolls: {
+					              instances: 1
+					            }, overlays: {
+					              instances: 1,
+					              interval: 0,
+					              percents: [20]
+					            }
+					          }
+					        }],
+					        callbacks: {
+					          adBegin: function(obj){
+					            if (canLog){
+					              console.log('An ad begun');
+					              console.log('  * Controller ID: ' + obj.controllerID);
+					              console.log('  * Break: ' + obj.state);
+					              console.log('  * Break type: ' + obj.type);
+					            }
+					          },
+					          adBreakBegin: function(state, controllerID){
+					            if (canLog){
+					              console.log('An ad break begun');
+					              console.log('  * Break: ' + state);
+					              console.log('  * Controller ID: ' + controllerID);
+					            }
+					          },
+					          adBreakEnd: function(state, controllerID){
+					            if (canLog){
+					              console.log('An ad break ended');
+					              console.log('  * Break: ' + state);
+					              console.log('  * Controller ID: ' + controllerID);
+					            }
+					          },
+					          adEnd: function(obj){
+					            if (canLog){
+					              console.log('An ad ended');
+					              console.log('  * Controller ID: ' + obj.controllerID);
+					              console.log('  * Break: ' + obj.state);
+					              console.log('  * Break type: ' + obj.type);
+					            }
+					          },
+					          contentEnd: function(obj){
+					            if (canLog){
+					              console.log('Video content ended');
+					              console.log('  * Controller ID: ' + obj.controllerID);
+					            }
+					          },
+					          videoEnd: function(obj){
+					            if (canLog){
+					              console.log('Video experience ended');
+					              console.log('  * Controller ID: ' + obj.controllerID);
+					            }
+					          }
+					        },
+					        configuration: {
+					          publisher: {
+					            forceSkipDelay: true,
+					            html5SeamlessFullscreen: true,
+					            skipDelay: 3
+					          }
+					        },
+					        contentData: {
+					          sas_contentproviderid: 'testProviderID',
+					          sas_contentid: 'testContentID'
+					        },
+					        contentPlayer: {
+					          api: null,
+					          brigde: null
+					        },
+					        language: "EN"
+					      };
+					      // Player integration
+					      var setupObject = {};
+					      setupObject.file = videoFile;
+					      setupObject.width = 728;
+					      setupObject.height = 410;
+					      setupObject.primary = 'html5';
+					      setupObject.autostart = true;
+					      setupObject.events = {};
+					      setupObject.events.onReady = function(){
+					        // Player ready
+					        // Registering the player
+					        if(typeof sas != 'undefined' && typeof sas.video != 'undefined') {
+					          sas.video.register(data);
+					        }
+					      };
+					      // Embed with JW Player embedder
+					      jwplayer(container).setup(setupObject);
+					    </script>
+
+						<!-- END - SMART VIDEO INTEGRATION -->
+
+						<!--separate lines design-->
+						<div class="linetext728_big jump" style="margin-top: 20px;"></div>
+						<!--separate lines design-->
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>	
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>
+						<!--separate lines design-->
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>	
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728 jump"></div>
+						<div class="linetext728_end"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728_end"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728_end"></div>
+						<div class="linetext728"></div>
+						<div class="linetext728"></div>
+					</div>
+				</div>
+				<!--second colum-->
+				<div id="second" align="top">
+					<div class="linetext300"></div>
+					<div class="linetext300"></div>
+					<div class="linetext300 jump"></div>
+					<div class="linetext300_banner jump"></div>
+					<div class="linetext300"></div>
+					<div class="linetext300"></div>
+					<div class="linetext300_end"></div>
+					<div class="linetext300"></div><br>
+					<div class="linetext300_littleone jump"></div>
+					<div class="linetext300"></div>
+					<div class="linetext300"></div>
+					<div class="linetext300"></div>
+					<div class="linetext300"></div><br>
+					<div class="linetext300_end"></div>
+					<div class="linetext300"></div>
+					<div class="linetext300"></div>
+					<div class="linetext300 jump"></div>
+					<div id="linetext300_littletwo"></div>
+					<div class="linetext300"></div>
+					<div class="linetext300"></div>
+					<div class="linetext300 jump"></div>
+					<div class="linetext300_banner jump"></div>
+					<div class="linetext300"></div>
+					<div class="linetext300"></div>
+					<div class="linetext300_end"></div>
+					<div class="linetext300 jump"></div>
+					<div class="linetext300_littleone jump"></div>
+					<div class="linetext300"></div>
+				</div>
+			</div>
+		</div>
+			<div id="copyright_smart"><br>Copyright&copy; <script type="text/javascript">document.write(new Date().getFullYear())</script> Smart AdServer</div>
+			<a href="http://gallery.smartadserver.com" class="back_gallery">Back to Gallery</a>
+		</div>
+	</div>
+</body> 
+</html>
