@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>html5 multi clicktag</title>
+ 
+<script src="//ns.sascdn.com/diff/templates/js/banner/sas-clicktag-3.0.js"></script>
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<style>
+body{width:300px;height:600px;margin:0;padding:0;}
+#main-container{width:300px;height:600px;cursor:pointer;}
+#click-area1{background-color:red;height:150px;display:block;}
+#click-area2{background-color:blue;height:150px;display:block;}
+#click-area3{background-color:yellow;height:150px;display:block;}
+#click-area4{background-color:black;height:150px;display:block;}
+</style>
+</head>
+<body>
+ 
+<script type="text/javascript">
+var clickTag = "http://smartadserver.com";
+var clickTag0 = "http://google.com";
+var clickTag1 = "http://wp.pl";
+var clickTag2 = "http://onet.pl";
+</script>
+ 
+<div id="main-container">
+<a id="click-area1"></a>
+<a id="click-area2"></a>
+<a id="click-area3"></a>
+<a id="click-area4"></a>
+</div>
+<script type="text/javascript">
+var clickArea1 = document.getElementById("click-area1");
+clickArea1.onclick = function(){
+ 
+window.open(clickTag, "blank")
+ 
+}
+var clickArea2 = document.getElementById("click-area2");
+clickArea2.onclick = function(){
+ 
+window.open(clickTag0, "blank")
+ 
+}
+var clickArea3 = document.getElementById("click-area3");
+clickArea3.onclick = function(){
+ 
+window.open(clickTag1, "blank")
+ 
+}
+var clickArea4 = document.getElementById("click-area4");
+clickArea4.onclick = function(){
+ 
+window.open(clickTag2, "blank")
+ 
+}
+</script>
+</body>
+</html>
