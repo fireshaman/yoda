@@ -1,0 +1,250 @@
+body
+{
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Poiret One', cursive;
+	font-weight: 400;
+	color: rgba(119,119,119,1);
+}
+
+#articleContent
+{
+	position: relative;
+	float: left;
+	width: 720px;
+	margin-right: 5px;
+}
+#right-column
+{
+	position: relative;
+	float: left;
+	width: 300px;
+}
+#title
+{
+	font-size: 50px;
+	font-weight: 400;
+}
+#headertitle
+{
+	padding-top: 3%;
+	box-sizing: border-box;
+}
+#slider, #columns, #header
+{
+	margin: auto;
+	width: 1025px !important;
+}
+#header
+{
+	height: 125px;
+}
+#pregeneral
+{
+	width:100%;
+	margin: 0 auto;
+	text-align:center;
+}
+#general
+{
+	width: 1150px;
+	position:relative;
+	display:block;
+	margin:0 auto;
+	border-left:1px solid #dcdcdc;
+	border-right:1px solid #dcdcdc;
+	background-color:#fcfcfc;
+}
+
+
+.bloc1 {
+	width:720px;
+	height:247px;
+	background-image: url('//demo.smartadserver.com/shared/smart/spain/jmencina/resources/css/icons/diagonal-noise.png');
+	background-color:#CECECE;
+	margin-right:5px;
+	border-radius:6px;
+	text-align:center;
+	font-size:30px;
+	font-weight:bold;
+	color:red;
+}
+
+.bloc2 {
+	width:660px;
+	height:10px;
+	background-color:#F7E269;
+	margin-bottom:5px;
+}
+
+.bloc3 {
+	width:330px;
+	height:10px;
+	background-color:#F7E269;
+	margin-bottom:5px;
+}
+
+.bloc4 {
+	width:300px;
+	height:10px;
+	background-color:#EFEFEF;
+	background-image: url('//demo.smartadserver.com/shared/smart/spain/jmencina/resources/css/icons/billie_holiday.png');
+	margin-bottom:5px;
+	margin-right:5px;
+	border-radius:2px;
+}
+
+.bloc5 {
+	width:125px;
+	height:10px;
+	background-color:#EFEFEF;
+	background-image: url('//demo.smartadserver.com/shared/smart/spain/jmencina/resources/css/icons/billie_holiday.png');
+	margin-bottom:5px;
+	border-radius:2px;
+}
+
+.bloc6 {
+	width:300px;
+	height:300px;
+	background-color:#AFAFAF;
+	background-image: url('//demo.smartadserver.com/shared/smart/spain/jmencina/resources/css/icons/white_carbonfiber.png');
+	margin-bottom:5px;
+	margin-right:5px;
+	border-radius:6px;
+}
+
+.bloc7 {
+	width:300px;
+	height:50px;
+	background-color:#AFAFAF;
+	background-image: url('//demo.smartadserver.com/shared/smart/spain/jmencina/resources/css/icons/white_carbonfiber.png');
+	margin-bottom:5px;
+	margin-right:5px;
+	border-radius:3px;
+}
+
+#col1_bloc3 {
+	width:300px;
+	height:60px;
+	background-color:#AFAFAF;
+	background-image: url('//demo.smartadserver.com/shared/smart/spain/jmencina/resources/css/icons/white_carbonfiber.png');
+	margin-bottom:5px;
+	margin-right:5px;
+	border-radius:3px;
+}
+
+.bloc8 {
+	width:720px;
+	height:10px;
+	background-color:#EFEFEF;
+	background-image: url('//demo.smartadserver.com/shared/smart/spain/jmencina/resources/css/icons/billie_holiday.png');
+	margin-bottom:5px;
+	margin-right:5px;
+	border-radius:2px;
+}
+
+.bloc9 {
+	width:200px;
+	height:10px;
+	background-color:#EFEFEF;
+	background-image: url('//demo.smartadserver.com/shared/smart/spain/jmencina/resources/css/icons/billie_holiday.png');
+	margin-bottom:5px;
+	border-radius:2px;
+}
+
+.bloc10 {
+	width:300px;
+	height:260px;
+	background-color:#AFAFAF;
+	background-image: url('//demo.smartadserver.com/shared/smart/spain/jmencina/resources/css/icons/white_carbonfiber.png');
+	margin-bottom:5px;
+	border-radius:6px;
+}
+
+.bloc10_bis {
+	width:300px;
+	height:30px;
+	background-color:#AFAFAF;
+	background-image: url('//demo.smartadserver.com/shared/smart/spain/jmencina/resources/css/icons/white_carbonfiber.png');
+	margin-bottom:5px;
+	border-radius:3px;
+}
+
+.bloc11 {
+	width:300px;
+	height:10px;
+	background-color:#EFEFEF;
+	background-image: url('//demo.smartadserver.com/shared/smart/spain/jmencina/resources/css/icons/billie_holiday.png');
+	margin-bottom:5px;
+	border-radius:2px;
+}
+
+.bloc12 {
+	width:150px;
+	height:10px;
+	background-color:#EFEFEF;
+	background-image: url('//demo.smartadserver.com/shared/smart/spain/jmencina/resources/css/icons/billie_holiday.png');
+	margin-bottom:5px;
+	border-radius:2px;
+}
+.center {
+	text-align: center;
+	position: relative;
+}
+
+#texte {
+	font: 30px "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+	color:#7F7F7F;
+	border-bottom:1px solid #7F7F7F;
+}
+
+#slider {
+	width:968px;
+	height:59px;
+	background-image: url('//demo.smartadserver.com/shared/smart/spain/jmencina/resources/css/icons/diagonal-noise.png');
+	background-color:#CECECE;
+	margin-bottom:10px;
+	border-radius:6px;
+}
+
+#description {
+	font-family: "tahoma";
+	font-size:14px;
+	text-align:justify;
+	color:#9E9E9E;
+}
+
+#bubble2 {
+	text-align:center;
+	font-family: Arial,sans-serif;
+	font-size: 25px;
+	color:#AFAFAF;
+	padding: 20px;
+}
+
+#bubble3 {
+	font-size: 25px;
+}
+
+#borderDiv {
+	border:1px solid red;
+}
+#rwd-icons{
+	width:130px;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:-130px;
+	text-align:center;
+}
+#rwd-icon1{
+	margin:10px auto 0 auto;
+}
+#goToMobile{
+	margin:130px auto 0 auto;
+	width:30px;
+	display:block;
+}
+#goToWeb{
+	margin:17px auto 0 auto;
+}
