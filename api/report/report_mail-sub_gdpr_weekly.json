@@ -1,0 +1,59 @@
+{
+  "StartDate": "CURRENT_DAY-7",
+  "EndDate": "CURRENT_DAY-1",
+   "Fields": [
+     {
+      "Day": {
+        "OutputName": "Tiempo"
+      }
+    },
+     {
+      "SiteName": {
+        "OutputName": "Name (Site)"
+      }
+    },
+    {
+      "Auctions": {
+        "OutputName": "RTB+ Auctions"
+      }
+    },
+     {
+      "PlatformName": {
+        "OutputName": "PlatformName"
+      }
+    },
+     {
+      "ConsentStringStatusName": {
+        "OutputName": "ConsentStringStatusName"
+      }
+    }
+  ],
+   "AdvancedFilter": [
+    [
+      {
+        "GdprApplies": {
+          "Operator": "in",
+          "Values": [
+            "1"
+          ]
+        }
+      }
+      
+    ]
+  ],
+    "scheduling": {
+        "jobperiodicity": "WEEKLY",
+        "schedulingStartDate": "2019-02-05T16:30:00",
+        "schedulingEndDate": "2019-12-31T23:59:00"
+    },
+  "outputParameters": {
+        "fileNameTemplate": "perday_monthly_[CURRENT_DAY].csv"
+        
+        },    
+    "onFinish": {
+        "sendEmailsTo": ["mailaddressp@example.com","mailaddressp@example.com"]
+        },
+    "onError": {
+        "sendEmailsTo": ["mailaddressp@smartadserver.com"]
+        }      
+}

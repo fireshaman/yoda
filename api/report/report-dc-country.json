@@ -1,0 +1,37 @@
+{
+	"outputParameters": {
+		"FilenameTemplate": "Report_DCID_2664",
+		"FileFormat": "CSV"
+	},
+	"onFinish": {
+		"sendEmailsTo": [
+			"hsolera@smartadserver.com",
+			"jmencinapino@smartadserver.com"
+		]
+	},
+	"onError": {
+		"sendEmailsTo": [
+			"hsolera@smartadserver.com",
+			"jmencinapino@smartadserver.com"
+		]
+	},
+	"StartDate": "2021-03-20T00:00:00",
+	"EndDate": "2021-04-07T00:00:00",
+	"Fields": [
+		{
+			"Auctions": {
+				"OutputName": "Auctions"
+			}
+		},
+		{
+			"DataCenterId": {
+				"OutputName": "DataCenterId"
+			}
+		},
+		{
+			"CountryName": {
+				"OutputName": "CountryName"
+			}
+		}
+	]
+}

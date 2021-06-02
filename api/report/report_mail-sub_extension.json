@@ -1,0 +1,50 @@
+{
+  "StartDate": "CURRENT_DAY-7",
+  "EndDate": "CURRENT_DAY",
+  "fields": [
+    {
+      "Day": {}
+    },
+    {
+      "InsertionName": {}
+    },
+    {
+      "SiteName": {}
+    },
+    {
+      "ImpressionsTrueCount": {}
+    },
+    {
+      "TotalPaidPriceNetworkCurrencyTrueCount": {}
+    }
+  ],
+  "networkIds": [
+    0000
+  ],
+  "scheduling": {
+    "jobperiodicity": "DAILY",
+    "schedulingStartDate": "2019-01-01T8:36:00",
+    "schedulingEndDate": "2021-12-31T14:45:21"
+  },
+  "outputParameters": {
+    "fileFormat":"XLSX",
+    "fileNameTemplate": "name_[CURRENT_DAY]_details.xlsx",
+    "outputDestination": "HDFS",
+    "timezone": "UTC",
+    "displayHeader": true,
+    "datePattern": "yyyy-MM-dd",
+    "encoding": "UTF-8",
+    "fieldSeparator": ";"
+  },
+  "onFinish": {
+    "callback": null,
+    "sendEmailsTo": [
+      "mailaddressp@example.com"
+    ]
+  },
+  "onError": {
+    "sendEmailsTo": [
+      "mailaddressp@smartadserver.com"
+    ]
+  }
+}

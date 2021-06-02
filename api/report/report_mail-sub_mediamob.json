@@ -1,0 +1,27 @@
+{
+  "StartDate": "CURRENT_DAY-1",
+  "EndDate": "CURRENT_DAY",
+  "Fields": [
+    {
+      "SiteName": {}
+    },
+    {
+      "FormatName": {}
+    },
+    {
+      "RtbImpressions": {}
+    },
+    {
+      "TotalPaidPrice": {}
+    }
+  ],
+  "outputParameters": {
+        "fileNameTemplate": "RTB_Report_MediaMob_daily.csv"
+        },    
+    "onFinish": {
+        "sendEmailsTo": ["mailaddresspp@gmail.com"]
+        },
+    "onError": {
+        "sendEmailsTo": ["mailaddressp@smartadserver.com"]
+        }      
+}

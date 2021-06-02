@@ -1,0 +1,89 @@
+{
+  "StartDate": "CURRENT_DAY-2",
+  "EndDate": "CURRENT_DAY-1",
+   "Fields": [
+     {
+        "Hour": {}
+     },
+	 {
+      "InsertionScriptName": {
+        "OutputName": "Name (Nombre_template)"
+		}
+      },
+	  {
+      "InsertionScriptId": {
+        "OutputName": "Name (ScriptId)"
+		}
+      },
+	  {
+      "SiteName": {
+        "OutputName": "Name (Site)"
+		}
+      },
+     {
+      "AdvertiserName": {
+        "OutputName": "Name (Anunciante)"
+		}
+      },
+     {
+      "CampaignName": {
+        "OutputName": "Name (Campania)"
+		}
+    },
+    {
+      "FormatName": {
+        "OutputName": "Name (Formato)"
+		}
+      },
+    {
+      "PlatformName": {
+        "OutputName": "Name (Plataforma)"
+		}
+      },
+    {
+      "Banners": {
+        "OutputName": "Name (Impresiones_directas)"
+		}
+      },
+     {
+      "ImpressionsTrueCount": {
+        "OutputName": "Name (Impresiones_RTB)"
+		}
+      },
+    {
+      "NotViewableImpressions": {
+        "OutputName": "Name (Impresiones_no_vistas_directas)"
+		}
+      },{
+      "RtbNotViewableImpressions": {
+        "OutputName": "Name (Impresiones_no_vistas_RTB)"
+		}
+      },
+    {
+      "ViewabilityRate": {
+        "OutputName": "Name (Viability_Rate_Directas)"
+		}
+    },{
+      "RtbViewabilityRate": {
+        "OutputName": "Name (Viability_Rate_RTB)"
+		}
+    },
+     {
+      "Keyword": {
+        "value": "type=",
+        "OutputName": "type="
+      }
+    }
+  ],
+   
+  "outputParameters": {
+        "fileNameTemplate": "personalizado_zinet_v4.csv"
+        
+        },    
+    "onFinish": {
+        "sendEmailsTo": ["hhuerta@smartadserver.com"]
+        },
+    "onError": {
+        "sendEmailsTo": ["hhuerta@smartadserver.com"]
+        }      
+}

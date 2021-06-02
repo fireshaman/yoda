@@ -1,0 +1,40 @@
+{
+  "StartDate": "CURRENT_DAY-1",
+  "EndDate": "CURRENT_DAY",
+  "Fields": [
+    {
+      "InsertionName": {}
+    },
+    {
+      "InsertionId": {}
+    },
+    {
+      "ImageName": {}
+    },
+    {
+      "ImageFileSize": {}
+    },
+    {
+      "ImageWeight": {}
+    },
+    {
+      "ImageWidth": {}
+    },
+    {
+      "ImageHeight": {}
+    },
+    {
+      "Banners": {}
+    }
+  ],
+  "outputParameters": {
+        "fileNameTemplate": "RTB_Report_MediaMob.csv"
+        },    
+    "onFinish": {
+        "sendEmailsTo": ["mailaddressp@gmail.com"]
+        },
+    "onError": {
+        "sendEmailsTo": ["mailaddressp@gmail.com"]
+        }      
+}
+
