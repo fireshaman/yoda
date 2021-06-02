@@ -1,0 +1,12 @@
+<script type="text/javascript">
+	(function(w){
+		var d=w.document, h=d.getElementsByTagName('head')[0], b=d.body;
+		var css='#sas_[sas_formatId], #sas_container_[sas_insertionId]{width:300px !important;height:250px !important;}#sas_[sas_formatId]{margin:auto;}#sas_videoDiv_formatId], #sas_relDiv_[sas_insertionId]{width:300px !important;height:200px !important;}',
+		style=d.createElement('style');
+		style.type='text/css';
+		if (style.styleSheet) style.styleSheet.cssText=css;
+		else style.appendChild(document.createTextNode(css));
+		if (typeof w.sas_ajax != 'undefined' && w.sas_ajax) w.sas_appendToContainer([sas_formatId], style);
+		else h.appendChild(style);
+	})(window.top);
+</script>

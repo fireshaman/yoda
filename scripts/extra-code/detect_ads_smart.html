@@ -1,0 +1,44 @@
+<html>
+<head>
+<script src='http://ww671.smartadserver.com/config.js?nwid=687' type="text/javascript"></script>
+<script type="text/javascript">
+    sas.setup({ domain: 'http://ww671.smartadserver.com', async: true, renderMode: 0});
+	//  renderMode define when ads must be rendered :
+	//  	- DEFAULT		(0) : as soon as ad is ready
+	//  	- READY			(1) : render ads when document is ready
+	//  - ON_DEMAND		(2) : user must call sas.callAds()
+</script>
+</head>
+
+<body>
+<div id="sas_16391"></div>
+<script type="text/javascript">
+	sas.call("std", {
+		siteId:		37942,	
+		pageId:		258218,	
+		formatId:		16391,
+		target: 'env=dev',
+		options: {onLoad: checkAds('sas_16391',500)}
+		});
+
+	function checkAds(divId,timeout){
+
+		setTimeout(function (){checkEmpty(divId)},timeout);
+
+	}
+
+	function checkEmpty(divId){
+
+		element=document.getElementById(divId);
+
+		if(element.childNodes.length==1) {
+
+			alert('No ad detected');
+
+		} else {
+			alert('Ad shown');
+		}
+	}
+</script>
+</body>
+</html>

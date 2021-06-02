@@ -1,0 +1,55 @@
+<script src="//ced.sascdn.com/tag/1963/smart.js" async></script>
+<div id="sas_42581"></div>
+<script type="application/javascript">
+    var sas = sas || {};
+    sas.cmd = sas.cmd || [];
+    sas.cmd.push(
+        function () {
+            sas.call(
+                { siteId: 285505, pageId: 1045950, formatId: 42581, tagId: "sas_42581" },
+                { networkId: 1963, domain: "//www8.smartadserver.com",clickTrackingUrl: "%%CLICK_URL%%" , onNoad: callBack(42581) }
+            );
+        }
+    );
+    //function to make the passback
+    function callBack(formatId){
+        //First
+        var d=window.document, h=d.getElementsByTagName('head')[0], b=d.body;
+        var code='var oIF = true;',
+        script=d.createElement('script');
+        script.type='application/javascript';
+        script.language="Javascript1.1";
+        script.src='';
+        script.appendChild(document.createTextNode(code));
+        if (typeof window.sas_ajax != 'undefined' && window.sas_ajax) window.sas_appendToContainer(formatId, script);
+        else h.appendChild(script);
+        //Second
+        var code='',
+        script2=d.createElement('script');
+        script2.type='application/javascript';
+        script2.language="Javascript1.1";
+        script2.src='https://us.img.e-planning.net/layers/epl-41.js'
+        script2.appendChild(document.createTextNode(code));
+        if (typeof window.sas_ajax != 'undefined' && window.sas_ajax) window.sas_appendToContainer(formatId, script2);
+        else h.appendChild(script2);
+        //Third
+        var d=window.document, h=d.getElementsByTagName('head')[0], b=d.body;
+        var code='var eplArgs = { sV:"ads.us.e-planning.net",vV:4,sI:"1a4c2",sec:"ROS",kVs:{ }};var eplAdsArray=new Array();function eplInit() { if (this.readyState == \'complete\') { document.epl.eplInit(eplArgs); for (var i=0; i<eplAdsArray.length; i++) { if (eplAdsArray[i][1].custF) document.epl.setCustomAdShow(eplAdsArray[i][0],eplAdsArray[i][1].custF); document.epl.setSpace(eplAdsArray[i][0], eplAdsArray[i][1]); } }}if (document.epl != undefined) { document.epl.eplInit(eplArgs);} else { var array = document.getElementsByTagName(\'script\'); var e = undefined; for (var i=0; i<array.length; i++) { if (array[i].src.indexOf(\'epl-41.js\') != -1) { e = array[i]; } } if (e != undefined) { e.onreadystatechange = eplInit; }}function eplAD4(eID,opts) { document.write(\'<div id="eplAdDiv\'+ eID +\'"></div>\'); if (!opts) opts = {t:2}; if (document.epl != undefined) { if (opts.custF) document.epl.setCustomAdShow(eID,opts.custF); document.epl.setSpace(eID, opts); } else { eplAdsArray.push(new Array(eID, opts)); }}',
+        script3=d.createElement('script');
+        script3.type='application/javascript';
+        script3.language="Javascript1.1";
+        script3.src='';
+        script3.appendChild(document.createTextNode(code));
+        if (typeof window.sas_ajax != 'undefined' && window.sas_ajax) window.sas_appendToContainer(formatId, script3);
+        else h.appendChild(script3);
+        //Fourth
+        var code='eplAD4("300x250_Infi",{t:1,timeout:0,ma:1,custF:null,wh:"300x250",sd:"1a4c2!ROS!https://ads.us.e-planning.net/!!", });',
+        script4=d.createElement('script');
+        script4.type='application/javascript';
+        script4.language="Javascript1.1";
+        script4.src='https://us.img.e-planning.net/layers/epl-41.js'
+        script4.appendChild(document.createTextNode(code));
+        if (typeof window.sas_ajax != 'undefined' && window.sas_ajax) window.sas_appendToContainer(formatId, script4);
+        else h.appendChild(script4);
+    }
+</script>

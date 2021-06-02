@@ -1,0 +1,25 @@
+<script type="application/javascript">
+	//outside script integration
+	(function(w){
+		var d=w.document, h=d.getElementsByTagName('head')[0], b=d.body;
+		var code='#sas_53442-1{position:fixed!important;}',
+		elementOne=d.createElement('style');
+		elementOne.type='text/css';
+		elementOne.src='';
+		elementOne.appendChild(document.createTextNode(code));
+		h.appendChild(elementOne);
+	})(window.top);
+</script>
+
+<script type="text/javascript">
+(function(w){
+	var d=w.document, h=d.getElementsByTagName('head')[0], b=d.body;
+	var css='#sas_53442-1{position:fixed!important;}',
+		style=d.createElement('style');
+	style.type='text/css';
+	if (style.styleSheet) style.styleSheet.cssText=css;
+	else style.appendChild(document.createTextNode(css));
+	if (typeof w.sas_ajax != 'undefined' && w.sas_ajax) w.sas_appendToContainer([sas_formatId], style);
+	else h.appendChild(style);
+})(window.top);
+</script>

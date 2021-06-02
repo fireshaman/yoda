@@ -1,0 +1,40 @@
+<script type="application/javascript">
+	//doubleclick pixel
+	(function(w){
+		var d=w.document, h=d.getElementsByTagName('head')[0], b=d.body;
+		var code='',
+		imageElement=d.createElement('IMG');
+		imageElement.type='image/gif';
+		imageElement.src ='https://ad.doubleclick.net/ddm/trackimp/N448205.3028901DAN_ES_ADGAGE/B22692987.247110947;dc_trk_aid=443525586;dc_trk_cid=116434832;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=?';
+		//style
+		imageElement.style.width='1px';
+		imageElement.style.height='1px';
+		imageElement.style.border='0px';
+		imageElement.style.position = "absolute";
+		imageElement.style.top='60%';
+		imageElement.style.left='30%';
+		imageElement.appendChild(document.createTextNode(code));
+		h.appendChild(imageElement);
+	})(window.top);
+	//IAS pixel - Script Skeleton
+	(function(w){
+		var d=w.document, h=d.getElementsByTagName('head')[0], b=d.body;
+		var code='',
+		script=d.createElement('script');
+		script.type='application/javascript';
+		script.src='https://pixel.adsafeprotected.com/rjss/st/282118/36232720/skeleton.js';
+		script.appendChild(document.createTextNode(code));
+		h.appendChild(script);
+	})(window.top);
+	//IAS pixel - NoScript Skeleton
+	(function(w){
+		var d=w.document, h=d.getElementsByTagName('head')[0], b=d.body;
+		var code='<img SRC="https://pixel.adsafeprotected.com/rfw/st/282118/36232719/skeleton.gif" border=0 width=1 height=1 ALT="">',
+		noscript=d.createElement('NOSCRIPT');
+		noscript.type='application/javascript';
+		noscript.src='https://pixel.adsafeprotected.com/rjss/st/251219/33940884/skeleton.js';
+		noscript.appendChild(document.createTextNode(code));
+		h.appendChild(noscript);
+	})(window.top);
+</script>
+

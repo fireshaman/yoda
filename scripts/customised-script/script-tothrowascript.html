@@ -1,0 +1,12 @@
+<script type="text/javascript">
+	 (function(w){
+        var d=w.document, h=d.getElementsByTagName('head')[0], b=d.body;
+        var code='';
+        var script=d.createElement('script');
+        script.type='application/javascript';
+        script.src=''
+        script.appendChild(document.createTextNode(code));
+        if (typeof w.sas_ajax != 'undefined' && w.sas_ajax) w.sas_appendToContainer([sas_formatId], script);
+        else h.appendChild(script);
+    })(window.top);
+</script>

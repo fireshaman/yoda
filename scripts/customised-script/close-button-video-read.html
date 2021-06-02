@@ -1,0 +1,12 @@
+<script type="text/javascript">
+(function(w){
+	var d=w.document, h=d.getElementsByTagName('body')[0], b=d.body;
+	var css='.sas-btn-skip{display:none}',
+		style=d.createElement('style');
+	style.type='text/css';
+	if (style.styleSheet) style.styleSheet.cssText=css;
+	else style.appendChild(document.createTextNode(css));
+	if (typeof w.sas_ajax != 'undefined' && w.sas_ajax) w.sas_appendToContainer([sas_formatId], style);
+	else h.appendChild(style);
+})(window.top);
+</script>
