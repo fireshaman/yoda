@@ -1,0 +1,28 @@
+VAST and Redirection for Video creative examples
+
+Kia - Redirection to video(.mp4):
+https://static.richandreach.com/varios/51177_KIA_10_DIAS_JUN_NADAL_Castellano_V5_H264.mp4
+
+Citroen - VAST 2.0:
+https://fw.adsafeprotected.com/vast/fwjsvid/st/143439/22239981/skeleton.js?IAS_VID_OPTS=hidecountdown&includeFlash=false&originalVast=https://ad.doubleclick.net/ddm/pfadx/N755990.140075SAPO/B20723375.214261421;sz=0x0;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;dcmt=text/xml;dc_vast=3
+
+Harry Potter - VAST 3.0:
+https://www3.smartadserver.com/ac?siteid=154912&pgid=792896&fmtid=30989&ab=1&tgt=test-vast-harry&oc=1&out=vast3&ps=1&pb=0&visit=S&vcn=s&tmstp=[timestamp]
+
+
+Baby Driver - VAST 3.0:
+https://www3.smartadserver.com/ac?siteid=154912&pgid=792896&fmtid=30989&ab=1&tgt=tequila&oc=1&out=vast3&ps=1&pb=0&visit=S&vcn=s&tmstp=[timestamp]
+
+https://www8.smartadserver.com/ac?siteid=237576&pgid=939242&fmtid=39887&ab=1&tgt=testsmart13&oc=1&out=vast3&ps=1&pb=2&visit=S&vcn=s&tmstp=[timestamp]
+
+
+Pubmatic - VPAID - VAST 3.0 (No Impression parameter) - It has not to work:
+https://vpaid.pubmatic.com/ads/video/vadtag.html?adtype=13&pubId=157111&siteId=315365&adId=1529592&vadFmt=3&vapi=2&vminl=1&vmaxl=40&vpos=1&vh=PLAYER_HEIGHT&vw=PLAYER_WIDTH&vfmt=1+2+3+4+5+6+7+8&sec=1&gdpr=&gdpr_consent=&kadpageurl=https%3A%2F%2Fwww.documaniatv.com%2F
+
+Appspot - Ima Vpaid - VAST 2.0 (No Impression parameter) - It has not to work:
+https://ima3vpaid.appspot.com/?adTagUrl=https%3A%2F%2Fgoogleads.g.doubleclick.net%2Fpagead%2Fads%3Fclient%3Dca-video-pub-4939634212290203%26slotname%3D9817423882%26ad_type%3Dvideo%26description_url%3Dhttp%253A%252F%252Fsapo.pt%26max_ad_duration%3D30000%26videoad_start_delay%3D0&type=js&vad_format=linear&vpmute=1&vpa=0
+
+
+Moat Example - VAST 2.0 (No Impression parameter) - It has not to work:
+https://svastx.moatads.com/caratproctergambleportugalsizmekvideo554355321303/PANTENE_-_Portugal_-_PT_PG_Pantene_Colossus_Video_Online_for_ISP_201802-23875307_both.xml
+
