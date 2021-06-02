@@ -1,0 +1,132 @@
+*
+{
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+    color: rgb(59, 59, 59);
+}
+body
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+    background: #cccccc;
+}
+#header
+{
+    width: 100%;
+    height: 200px;
+    background: url('../img/header-bk.jpg') fixed;
+    background-position-y: -350px;
+}
+.header-cover
+{
+    background: rgba(119, 119, 119, 0.4) !important;
+    z-index: 1;
+    text-align: center;
+}
+#header-title
+{
+    font-family: 'Squada One', cursive;
+    margin:auto;
+    color:rgba(235, 235, 235,1);
+    font-size: 90px;
+    line-height: 200px;
+    text-shadow:4px 4px rgb(226, 187, 0)
+    /*text-shadow:4px 4px rgb(255, 198, 41);*/
+}
+#general
+{
+    width: 70%;
+    margin: auto;
+    box-sizing: border-box;
+    padding-top: 2%;
+    /*border-left: rgba(150, 150, 150, 0.5) 1px solid;
+    border-right: rgba(150, 150, 150, 0.5) 1px solid;*/
+}
+.news
+{
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+.img
+{
+    width: 100%;
+    height: 100%;
+    background: center scroll;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 1s;
+}
+.img-container
+{
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+.img-cover, .header-cover
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+.img-cover:hover
+{
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+.img:hover
+{
+    transform: scale(1.1);
+}
+.article
+{
+    background:rgb(223, 223, 223);
+    box-sizing: border-box;
+    padding:1%;
+    margin-bottom: 2%;
+    cursor: pointer;
+    position: relative;
+    width: 30%;
+    height: 350px;
+    float: left;
+    margin-left: 2%;
+}
+.col2, .col3
+{
+    margin-left: 3% !important;
+}
+.arti-title
+{
+    font-size: 30px;
+    padding: 0px;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    font-family: 'Squada One', cursive;
+}
+#news-02 .article
+{
+    background:rgba(156, 247, 255, 0.5);
+}
+#footer
+{
+    margin-top: 5%;
+    border-top: rgba(150, 150, 150, 0.5) 1px solid;
+    width: 100%;
+    height: 150px;
+    font-size: 13px;
+    color: rgba(150, 150, 150, 0.5);
+    text-align: center;
+    padding-top: 7%;
+    background-color: rgb(216, 216, 216);
+}
+#clear
+{
+    clear: both;
+}
